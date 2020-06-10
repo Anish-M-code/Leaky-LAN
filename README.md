@@ -1,14 +1,5 @@
 # Leaky-LAN
 
-##       ########    ###    ##    ## ##    ##    ##          ###    ##    ## 
-##       ##         ## ##   ##   ##   ##  ##     ##         ## ##   ###   ## 
-##       ##        ##   ##  ##  ##     ####      ##        ##   ##  ####  ## 
-##       ######   ##     ## #####       ##       ##       ##     ## ## ## ## 
-##       ##       ######### ##  ##      ##       ##       ######### ##  #### 
-##       ##       ##     ## ##   ##     ##       ##       ##     ## ##   ### 
-######## ######## ##     ## ##    ##    ##       ######## ##     ## ##    ## 
-
-
 It is a simple file sharing service in LAN for windows and Linux systems which have python3 installed.
 
 Note: Files shared using this tool is available to each and every device 
