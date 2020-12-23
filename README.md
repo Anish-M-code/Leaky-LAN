@@ -14,12 +14,14 @@ Note: Files shared using this tool is available to each and every device
 Quick Installation
 ------------------
 
-Install from [PyPI](https://pypi.org/project/leaky-lan/):
+To Install from [PyPI](https://pypi.org/project/leaky-lan/):
+
+Run the following commands in Linux terminal / Windows powershell / command prompt to get started:-
 
 ```
 pip install leaky-lan
 ```
-Then run following commands in terminal/powershell to get started:-
+Then :-
 
 For Windows:
 ```
