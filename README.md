@@ -1,6 +1,6 @@
 # Leaky-LAN
 
-It is a simple file sharing service in LAN for windows and Linux systems which have python3 installed.
+It is a simple file sharing and HTTP server in LAN for windows and Linux systems which have python3 installed.
 
 <img src="https://github.com/Anish-M-code/Leaky-LAN/raw/master/screenshot.png">
 
