@@ -7,6 +7,14 @@ It is a simple file sharing and HTTP server in LAN for windows and Linux systems
 Note: Files shared using this tool is available to each and every device 
  connected to LAN. Don't use on public Networks!
  
+ ## Main Features
+ 
+ - Easy to use , setup and maintain
+ - 100% Open source
+ - No third party code only standard python libraries used.
+ - setup required only on one computer.
+ - Bidirectional sharing of files possible using new web interface.
+ 
  <img src="https://github.com/Anish-M-code/Leaky-LAN/raw/master/webinterface.png">
  
  Just run it on system which has file to be shared and select the folder.
