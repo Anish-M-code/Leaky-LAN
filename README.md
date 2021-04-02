@@ -19,17 +19,17 @@ To Install from [PyPI](https://pypi.org/project/leaky-lan/):
 Run the following commands in Linux terminal / Windows powershell / command prompt to get started:-
 
 ```
-pip install leaky-lan
+pip install leakylan
 ```
 Then :-
 
 For Windows:
 ```
-py -m leaky_lan 
+py -m leakylan 
 ```
 For Linux based Distributions:
 ```
-python3 -m leaky_lan
+python3 -m leakylan
 ```
 
 
