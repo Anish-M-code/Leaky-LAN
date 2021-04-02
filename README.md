@@ -15,7 +15,15 @@ Note: Files shared using this tool is available to each and every device
  - setup required only on one computer.
  - Bidirectional sharing of files possible using new web interface.
  
+ ## Web Interfaces
+ 
+ Interface to Recieve Files to computer.
+ 
  <img src="https://github.com/Anish-M-code/Leaky-LAN/raw/master/webinterface.png">
+ 
+ Interface to Share Files from computer.
+ 
+ <img src="https://github.com/Anish-M-code/Leaky-LAN/raw/master/webinterface2.png">
  
  Just run it on system which has file to be shared and select the folder.
  The folder will be shared over LAN to each device connected in LAN.
