@@ -17,11 +17,11 @@ Note: Files shared using this tool is available to each and every device
  
  ## Web Interfaces
  
- Interface to Recieve Files to computer.
+ - Interface to Recieve Files to computer : -
  
  <img src="https://github.com/Anish-M-code/Leaky-LAN/raw/master/webinterface.png">
  
- Interface to Share Files from computer.
+ - Interface to Share Files from computer : -
  
  <img src="https://github.com/Anish-M-code/Leaky-LAN/raw/master/webinterface2.png">
  
