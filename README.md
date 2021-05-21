@@ -34,20 +34,15 @@ Quick Installation
 
 To Install from [PyPI](https://pypi.org/project/leaky-lan/):
 
-Run the following commands in Linux terminal / Windows powershell / command prompt to get started:-
+Run the following commands in Linux terminal / Windows powershell / command prompt to install :-
 
 ```
 pip install leakylan
 ```
-Then :-
+Then type the following command to get started :-
 
-For Windows:
 ```
-py -m leakylan 
-```
-For Linux based Distributions:
-```
-python3 -m leakylan
+leakylan
 ```
 
 
