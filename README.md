@@ -44,5 +44,5 @@ Then type the following command to get started :-
 ```
 leakylan
 ```
-
+To run program by directly downloading from github refer [ Instructions](/Install.md) here.
 
