@@ -46,3 +46,12 @@ leakylan
 ```
 To run program by directly downloading from github refer [ Instructions](/Install.md) here.
 
+## FAQ
+
+- <b> Cannot share files in LAN ,why Leakylan doesnot work ? </b>
+
+This must be due to firewall , either apply proper firewall configuration ( recommended ) or disable it temporarily.
+
+- <b> How to stop sharing files ? </b>
+
+Press Ctrl and C both at same time.
