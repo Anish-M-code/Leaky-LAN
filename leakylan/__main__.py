@@ -53,6 +53,7 @@ print('''
 ''')
 
 def getip(port = ':8000'):
+
     flag=0
     # Code specific to windows operating system.
     if platform.system().lower() == 'windows':
@@ -97,6 +98,7 @@ def getip(port = ':8000'):
               print('Permission Denied!')
 
     return flag
+ 
 
 # variable to mark recieving mode.
 xflag = 0
@@ -167,9 +169,12 @@ def recieve():
     
     # Recieving mode.
     if xflag == 1 and flag == 1:
-
-        # start python http.server at default port 8000 in cgi mode
-        os.system('py -m http.server 9000 --cgi' if platform.system().lower() == 'windows' else 'python3 -m http.server 9000 --cgi')
+        try:
+            # start python http.server at default port 8000 in cgi mode
+            os.system('py -m http.server 9000 --cgi' if platform.system().lower() == 'windows' else 'python3 -m http.server 9000 --cgi')
+        except KeyboardInterrupt:
+            print('Program Exited Successfully!')
+            sys.exit(0)
     
     # Throw error if ipv4 address couldnot be obtained.    
     else:
@@ -197,14 +202,17 @@ def serve():
         # Remove index html files which might interfere while running http server.
         if os.path.exists("index.html"):
             os.remove("index.html")
-
-        # start python http.server at default port 8000
-        os.system('py -m http.server ' if platform.system().lower() == 'windows' else 'python3 -m http.server')
+        
+        try:
+            # start python http.server at default port 8000
+            os.system('py -m http.server ' if platform.system().lower() == 'windows' else 'python3 -m http.server')
+        except KeyboardInterrupt:
+            print('Program Exited Successfully!')
+            sys.exit(0)
     
     # Throw error if ipv4 address couldnot be obtained.    
     else:
         print("It seems Your Device is NOT connected to any Network !")
-
 
 # menu
 def menu():
