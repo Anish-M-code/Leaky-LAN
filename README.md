@@ -11,7 +11,6 @@ Note: Files shared using this tool is available to each and every device
  
  - Easy to use , setup and maintain
  - 100% Open source
- - No third party code only standard python libraries used.
  - setup required only on one computer.
  - Bidirectional sharing of files possible using new web interface.
  
