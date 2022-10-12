@@ -21,14 +21,21 @@
 # SOFTWARE.
 
 '''
-A simple file sharing service using python http.server and cgi module
+A simple file sharing service using python http.server and flask module
 developed by M.Anish <aneesh25861@gmail.com> to avoid third party code .
 
 '''
 import os
 import sys
 import platform
+import socket
+from flask import Flask, request, render_template, redirect
+from werkzeug.utils import secure_filename
 
+UPLOAD_FOLDER = "/files"
+TEMPLATES_FOLDER = os.getcwd()
+
+app = Flask(__name__, template_folder = TEMPLATES_FOLDER)
 # To clear screen.
 os.system('cls' if platform.system().lower() == 'windows' else 'clear')
 
@@ -106,72 +113,25 @@ xflag = 0
 # Flag is set to 1 if sharing is successful.
 flag = 0
 
-### html program to recieve files ###
-html='''
-<html>
-<body>
-   <h1> Leaky-LAN Web Portal </h1>
-   <form enctype = "multipart/form-data" action = "cgi-bin/action.py" method = "post">
-   <p>Enter File: <input type = "file"name ="filename" /></p>
-   <p>Confirm Upload: <input type = "submit" value = "Submit" /></p>
-   <br>
-   <p> Developed by M.Anish [aneesh25861@gmail.com] </p>
-</form>
-</body>
-</html>
-'''
-### End of html program
-
-### Cgi program ###
-action='''#!/usr/bin/python3
-import cgi, os
-import cgitb; cgitb.enable()
-form = cgi.FieldStorage()
-# Get filename here.
-fileitem = form['filename']
-# Test if the file was uploaded
-if fileitem.filename:
-   # strip leading path from file name to avoid
-   # directory traversal attacks
-   fn = os.path.basename(fileitem.filename)
-   out=open('files/' + fn, 'wb')
-   out.write(fileitem.file.read())
-'''
-### End of cgi program ###
- 
 # function to recieve files
 def recieve():
 
     # set xflag to mark recieving mode.
     xflag = 1
 
+    app.config['UPLOAD_FOLDER'] = os.getcwd() + UPLOAD_FOLDER
     # start copying required files to recieve files.
     if os.path.exists("files") is False:
         os.mkdir("files")
-        os.mkdir("cgi-bin")
         print("All your recieved files will be stored at " + os.getcwd() + "/files")
-
-    if os.path.exists("cgi-bin"):
-        os.chdir("cgi-bin")
-        with open("action.py","w") as f:
-            f.write(action)
-        os.chdir('..')
-        if platform.system().lower()!="windows":
-            os.chdir("cgi-bin")
-            os.system("chmod +x action.py")
-            os.chdir('..')
-
-    if os.path.exists("index.html") is False:
-        with open("index.html","w") as f:
-            f.write(html)
 
     flag = getip(':9000')
     
     # Recieving mode.
     if xflag == 1 and flag == 1:
         try:
-            # start python http.server at default port 8000 in cgi mode
-            os.system('py -m http.server 9000 --cgi' if platform.system().lower() == 'windows' else 'python3 -m http.server 9000 --cgi')
+            # Run the flask app.
+            app.run(host = '0.0.0.0', port = 9000)
         except KeyboardInterrupt:
             print('Program Exited Successfully!')
             sys.exit(0)
@@ -198,11 +158,6 @@ def serve():
 
     # If getting an ipv4 address for sharing successful start server.
     if flag == 1:
-
-        # Remove index html files which might interfere while running http server.
-        if os.path.exists("index.html"):
-            os.remove("index.html")
-        
         try:
             # start python http.server at default port 8000
             os.system('py -m http.server ' if platform.system().lower() == 'windows' else 'python3 -m http.server')
@@ -241,6 +196,29 @@ def menu():
     else:
         serve()
 
-menu()
+def get_ip_address():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    ip = s.getsockname()[0]
+    s.close()
+    return ip
+
+@app.route('/',methods = ['POST', 'GET'])
+def index():
+    if request.method == 'GET':
+        ip_address = get_ip_address()
+        return render_template('index.tmpl', server_ip_address = ip_address)
+    elif request.method == 'POST':
+        file = request.files['filename']
+        try:
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(file.filename)))
+            return "File is saved"
+        except FileNotFoundError:
+            return "File not found"
+        except IsADirectoryError:
+            return "File not chosen"
+
+if __name__ == "__main__":
+    menu()
 
 
