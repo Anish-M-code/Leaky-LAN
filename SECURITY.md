@@ -5,8 +5,6 @@ Leaky-LAN Project uses Python's http.server module which is not recommended for 
 It is strongly advised to use leaky lan only on secure trusted networks , all data transferred using Leaky-LAN is unencrypted
 and its usage for file sharing can be easily detected by simple port scans in local area network.
 
-Leaky-LAN doesnot use any third party modules to limit attack surface and only uses standard python libraries for file sharing.
-
 ## Reporting Security Issues
 
 For all my personal projects in Github , i strongly believe in Full Public disclosure by making the details of security vulnerabilities public .
