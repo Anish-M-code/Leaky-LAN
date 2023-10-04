@@ -64,14 +64,4 @@ This must be due to firewall , either apply proper firewall configuration ( reco
 Press Ctrl and C both at same time to terminate LeakyLan.
 
 ## Contributing
-1. Fork the repository
-2. Clone your fork
-```bash
-git clone htpps://github.com/<username>/Leaky-LAN.git
-```
-3. Go to the project directory
-```bash
-cd Leaky-LAN
-```
-4. Follow the installation instructions above
-5. Submit pull request
+For contributing to this project refer [CONTRIBUTING.md](/CONTRIBUTING.md) file.
