@@ -2,7 +2,7 @@
 
 It is a simple file sharing and HTTP server in LAN for windows and Linux systems which have python3 installed. Allows files to be shared in an easy and accessible way through LAN. No file sharing service is needed!
 
-<img src="https://github.com/Anish-M-code/Leaky-LAN/raw/master/screenshot.png">
+![start](https://github.com/Sam6900/Leaky-LAN/assets/85671637/29d96436-549b-48a5-9814-2b0466fd5cce)
 
 Note: Files shared using this tool is available to each and every device 
  connected to LAN. Don't use on public Networks!
@@ -22,15 +22,15 @@ When LeakyLAN loads up, you are prompted to choose 1 or 2.
  ## Web Interfaces
  
  - Interface to Recieve Files to computer : -
- 
- <img src="https://github.com/Anish-M-code/Leaky-LAN/raw/master/webinterface2.png">
+
+ ![receive](https://github.com/Sam6900/Leaky-LAN/assets/85671637/0fba9560-9e43-4969-9109-6f8634e9c59c)
 
  From this interface, you can choose a file and have it instantly uploaded to be shared. 
  Various file sizes are supported.
  
  - Interface to Share Files from computer : -
  
- <img src="https://github.com/Anish-M-code/Leaky-LAN/raw/master/webinterface.png">
+![send](https://github.com/Sam6900/Leaky-LAN/assets/85671637/8c10de40-fcaa-4460-a5cb-28752063b31e)
 
  From this interface, you can choose which folder has the file you want shared.
  The folder will be shared over LAN to each device that is connected.
