@@ -3,8 +3,7 @@
 import mysql.connector as conn
 from random import randint
 
-def pass_gen() -> str:
-    
+def pass_gen() -> str:
     passwd = ''.join(chr(randint(33, 126)) for _ in range(6))
     return passwd
 
@@ -52,8 +51,6 @@ class user_db(object):
     #create a new client object in client script to execute it
 
     def client_side(self,user,password):
-
-
         self.cursor.execute('USE Authorization')
         self.mydb.commit()
         self.cursor.execute('Select password from Auth where user = %s',(user,))
@@ -73,11 +70,6 @@ class user_db(object):
     
 
 
-host = 'localhost'
-user = 'sameer'
-password = 'xxxxxx'
-u = user_db(host, user, password)
-u.client_side('abc','bSe0[')
 
 
 
