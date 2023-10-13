@@ -3,7 +3,7 @@
 import mysql.connector as conn
 from random import randint
 
-def pass_gen() -> str:
+def pass_gen() -> str:
     passwd = ''.join(chr(randint(33, 126)) for _ in range(6))
     return passwd
 
