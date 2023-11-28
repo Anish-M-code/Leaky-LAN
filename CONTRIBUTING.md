@@ -1,6 +1,6 @@
 # Contributing to LeakyLAN
 
-Thank you for your interest in contributing to LeakyLAN. We welcome all contributions from anyone, whether you are new to the project or have been a long-time contributor.
+Thank you for your interest in contributing to LeakyLAN. LeakyLAN is a dead project no longer accepting contributions, this document is for archival purpose only.
 
 ### Prerequisite : -
 
