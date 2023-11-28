@@ -1,5 +1,7 @@
 # Leaky-LAN
 
+### [ Note ] : This project is no longer maintained , it is advised not to use this software anymore , This project was developed with minimal dependencies in mind however since python 3.13 removes many standard libraries used in this project as mentioned in ![PEP594](https://peps.python.org/pep-0594/#cgi) we have decided to sunset this project. Users are advised to use ![Magic-Wormhole] (https://github.com/magic-wormhole/magic-wormhole) or ![Onion Share](https://github.com/onionshare/onionshare) instead. Huge thanks to all contributors for their hard work.
+
 It is a simple file sharing and HTTP server in LAN for windows and Linux systems which have python3 installed. Allows files to be shared in an easy and accessible way through LAN. No file sharing service is needed!
 
 ![start](https://github.com/Sam6900/Leaky-LAN/assets/85671637/29d96436-549b-48a5-9814-2b0466fd5cce)
